@@ -11,7 +11,7 @@ public class RegexEmail {
     static Pattern pattern2 = Pattern.compile("^[A-Z]{3,}");
     static Pattern ForEmail = Pattern.compile(("^[a-z]{3,}[.]+[a-z]{3,}?[@]+[a-z]{2,}[.]+[a-z]{2,}[.]+[a-z]{2}$"));
     static  Pattern ForMobile = Pattern.compile("^[6-9]{1}[0-9]{1}[0-9]{10}");
-    static Pattern ForPassword = Pattern.compile("^(?=.*[A-Z])(?=.*[0-9]).{8,}$");
+    static Pattern ForPassword = Pattern.compile("^(?=.*[A-Z])(?=.*[0-9])(?=[^@#!$%^&+=]*[@#!$%^&+=][^@#!$%^&+=]*$).{8,}$");
 
     public static void main(String[] args) {
 
