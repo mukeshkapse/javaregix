@@ -10,6 +10,7 @@ public class RegexEmail {
 
     static Pattern pattern2 = Pattern.compile("^[A-Z]{3,}");
     static Pattern ForEmail = Pattern.compile(("^[a-z]{3,}[.]+[a-z]{3,}?[@]+[a-z]{2,}[.]+[a-z]{2,}[.]+[a-z]{2}$"));
+    static  Pattern ForMobile = Pattern.compile("^[6-9]{1}[0-9]{1}[0-9]{10}");
 
     public static void main(String[] args) {
 
@@ -20,6 +21,8 @@ public class RegexEmail {
         Matcher matcher1 = pattern2.matcher(Sc.nextLine());
         System.out.println("Enter Email");
         Matcher matcher3 = ForEmail.matcher(Sc.nextLine());
+        System.out.println("Enter Mobile Number");
+        Matcher matcher4 = ForMobile.matcher(Sc.nextLine());
 
 
         if(matcher.matches()&& matcher1.matches()){
@@ -27,6 +30,9 @@ public class RegexEmail {
         }
         if(matcher3.matches()){
             System.out.println("Valid Email");
+        }
+        if(matcher4.matches()){
+            System.out.println("Valid Mobile Number");
         }
         else{
             System.out.println("Invalid Detail");
