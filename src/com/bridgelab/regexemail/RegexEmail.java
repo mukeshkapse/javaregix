@@ -11,6 +11,7 @@ public class RegexEmail {
     static Pattern pattern2 = Pattern.compile("^[A-Z]{3,}");
     static Pattern ForEmail = Pattern.compile(("^[a-z]{3,}[.]+[a-z]{3,}?[@]+[a-z]{2,}[.]+[a-z]{2,}[.]+[a-z]{2}$"));
     static  Pattern ForMobile = Pattern.compile("^[6-9]{1}[0-9]{1}[0-9]{10}");
+    static Pattern ForPassword = Pattern.compile("^[a-zA-Z0-9].{8,}$");
 
     public static void main(String[] args) {
 
@@ -23,6 +24,8 @@ public class RegexEmail {
         Matcher matcher3 = ForEmail.matcher(Sc.nextLine());
         System.out.println("Enter Mobile Number");
         Matcher matcher4 = ForMobile.matcher(Sc.nextLine());
+        System.out.println("Enter Password");
+        Matcher matcher5 = ForPassword.matcher((Sc.nextLine()));
 
 
         if(matcher.matches()&& matcher1.matches()){
@@ -33,6 +36,9 @@ public class RegexEmail {
         }
         if(matcher4.matches()){
             System.out.println("Valid Mobile Number");
+        }
+        if(matcher5.matches()){
+            System.out.println("Valid Password");
         }
         else{
             System.out.println("Invalid Detail");
